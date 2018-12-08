@@ -12,9 +12,9 @@ import {
 } from "@angular/animations";
 
 @Component({
-  selector: "app-users",
-  templateUrl: "./users.component.html",
-  styleUrls: ["./users.component.scss"],
+  selector: "app-applications",
+  templateUrl: "./applications.component.html",
+  styleUrls: ["./applications.component.scss"],
 
   animations: [
     trigger("listStagger", [
@@ -41,12 +41,12 @@ import {
   ]
 })
 
-export class UsersComponent implements OnInit {
-  users$: Object;
+export class ApplicationsComponent implements OnInit {
+  applications$: Object;
 
   constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data => (this.users$ = data));
+    this.data.getApplications().subscribe(data => (this.applications$ = data));
   }
 }

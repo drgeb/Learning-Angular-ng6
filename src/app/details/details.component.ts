@@ -17,7 +17,7 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data.getUser(this.user$).subscribe(
+    this.data.getApplication(this.user$).subscribe(
       data => this.user$ = data
     );
   }

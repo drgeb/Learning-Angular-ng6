@@ -7,13 +7,13 @@ import { HttpClient } from "@angular/common/http";
 export class DataService {
   constructor(private http: HttpClient) {}
 
-  getUsers() {
+  getApplications() {
     return this.http.get("https://jsonplaceholder.typicode.com/users");
   }
 
-  getUser(userId) {
+  getApplication(applicationId) {
     return this.http.get(
-      "https://jsonplaceholder.typicode.com/users/" + userId
+      "https://jsonplaceholder.typicode.com/users/" + applicationId
     );
   }
 
